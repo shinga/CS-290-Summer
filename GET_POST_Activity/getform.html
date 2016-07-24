@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script type="text/javascript" src="get_weather.js" ></script>
+        <script>
+            var apiKey = '1901e81fd73ed80d117395ed81750602';
+
+            document.addEventListener('DOMContentLoaded', bindSubmit);
+        </script>
+
+    </head>
+
+    <body>
+        <form>
+            <fieldset>
+            <legend>Current Weather</legend>
+            <label for="city">City: </label>
+            <input type="text" name="city" id="city">
+            <br><br>
+            <label for="state">State: </label>
+            <input type="text" name="state" id="state">
+            <br>
+            <h3>Or: </h3>
+            <label for="zipCode">Zip Code: </label>
+            <input type="number" name="zipCode" id = "zipCode">
+            <input type="submit" id="urlSubmit">
+            </fieldset>
+        </form>
+        <div>
+            <h2>Result</h2>
+            <ul>
+                <li><span>City: </span><span id="postCity"></span></li>
+                <li><span>Current Temperature: </span><span id="cTemp"></span></li>
+                <li><span>Humidity: </span><span id="cHumid"></span></li>
+            </ul>
+        </div>
+    </body>
+</html>
