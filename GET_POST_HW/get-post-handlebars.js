@@ -35,7 +35,7 @@ app.get('/requests',function(req,res){
     }
     var context = {};
     context.list = params;
-    res.render('get_request_page', context);
+    res.render('get-request-page', context);
 });
 
 app.post('/requests', function(req,res){
@@ -45,7 +45,7 @@ app.post('/requests', function(req,res){
     }
     var context = {};
     context.list = params;
-    res.render('post_request_page', context);
+    res.render('post-request-page', context);
 });
 
 
