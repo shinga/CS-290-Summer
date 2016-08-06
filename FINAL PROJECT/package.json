@@ -1,8 +1,8 @@
 {
-  "name": "get_post_handlebars",
+  "name": "final_project",
   "version": "1.0.0",
   "description": "Hello world with express and node.js",
-  "main": "get_post_handlebars.js",
+  "main": "final_project.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -14,3 +14,4 @@
     "express-session": "^1.11.3",
     "mysql": "^2.8.0"
   }
+}
