@@ -47,13 +47,13 @@ document.getElementById('addActivity').addEventListener('click', function(event)
     td1.textContent = payload.name;
     td2.textContent = payload.reps;
     td3.textContent = payload.weight;
-    td4.textContent = payload.date;
-    td5.textContent = payload.lbs;
-    tr.appendChild(td5);
-    tr.appendChild(td4);
-    tr.appendChild(td3);
-    tr.appendChild(td2);
+    td4.textContent = payload.lbs;
+    td5.textContent = payload.date;
     tr.appendChild(td1);
+    tr.appendChild(td2);
+    tr.appendChild(td3);
+    tr.appendChild(td4);
+    tr.appendChild(td5);
     tbl.appendChild(tr);
 
 
