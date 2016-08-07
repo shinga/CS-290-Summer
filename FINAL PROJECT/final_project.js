@@ -74,19 +74,24 @@ app.get('/insert',function(req,res,next){
   });
 });
 
-//
-//
-//
-// app.post('/', function(req,res){
-//     console.log("how'd it get here");
-//     var params = [];
-//     for (var i in req.body){
-//         params.push({'name':i,'val':req.body[i]})
-//     }
-//     var context = {};
-//     context.list = params;
-//     res.render('home', context);
-// });
+
+
+
+app.post('/insert', function(req,res){
+    var aName = req.body.name;
+    var aReps = req.body.reps;
+    var aWeight = req.body.weight;
+    var aDate = req.body.date;
+    var aLbs = req.body.lbs;
+
+    pool.query("INSERT INTO exercises(name, reps, weight, date, lbs) VALUES (?, ?, ?, ?, ?)", [aName, aReps, aWeight, aDate, aLbs], function(err, result){
+        if(err){
+          next(err);
+          return;
+        }
+        console.log("Added " + result.insertID);
+    });
+});
 
 
 app.use(function(req,res){
