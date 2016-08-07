@@ -33,7 +33,7 @@ app.get('/',function(req,res,next){
         if(err){
             return next(err);
         }
-        context.results = JSON.stringify(rows);
+        context.results = rows;
         res.render('home.handlebars', context);
     });
 });
@@ -68,26 +68,7 @@ app.get('/insert',function(req,res,next){
 });
 
 
-function genContext(){
-    var stuffToDisplay = {};
-    stuffToDisplay.randnum = Math.random();
-    return stuffToDisplay;
-}
 
-
-app.get('/randnum',function(req,res){
-    res.render('randnum',genContext());
-});
-
-app.get('/requests',function(req,res){
-    var params = [];
-    for (var i in req.query){
-        params.push({'name':i, 'val':req.query[i]});
-    }
-    var context = {};
-    context.list = params;
-    res.render('get-request-page', context);
-});
 
 app.post('/requests', function(req,res){
     var params = [];
@@ -96,7 +77,7 @@ app.post('/requests', function(req,res){
     }
     var context = {};
     context.list = params;
-    res.render('post-request-page', context);
+    res.render('home', context);
 });
 
 

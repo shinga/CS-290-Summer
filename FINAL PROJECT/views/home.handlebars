@@ -1,26 +1,35 @@
 <h1>What's in the MySQL Database?</h1>
 
 <p>{{results}}</p>
+<form>
+    <fieldset>
+    <legend>Add Activity</legend>
+    <br>
+    <label for="city">Activity Name: </label>
+    <input type="text" name="city" id="city">
+    <br><br>
+    <label for="reps">Reps: </label>
+    <input type="number" name="reps" id="reps">
+    <br><br>
+    <label for="weight">Weight: </label>
+    <input type="number" name="weight" id="weight">
+    <br><br>
+    <label for="date">Date: </label>
+    <input type="date" name="date" id="date">
+    <br><br>
+    <label for="lbs">Pounds </label>
+    <input type="radio" name="lbs" value = true>
+    <label for="lbs">Kilos </label>
+    <input type="radio" name="lbs" value = false>
+    <br><br>
+    <input type="submit" id="urlSubmit">
 
-<div id="tblCont">
+    </fieldset>
+</form>
 
-</div>
-<div id="up">
-
-</div>
-<div id="down">
-
-</div>
-<div id="left">
-
-</div>
-<div id="right">
-
-
-</div>
-<div id="select">
-
-</div>
-
-<script src="myScript.js">
-</script>
+{{#each results}}
+<tr>
+    <td>{{this.name}}</td>
+    <td>{{this.reps}}</td>
+</tr>
+{{/each}}
