@@ -45,22 +45,22 @@ document.getElementById('addActivity').addEventListener('click', function(event)
     var td4 = document.createElement("td");
     var td5 = document.createElement("td");
     var td6 = document.createElement("td");
-    var delbutt = document.createElement("input");
-    delbutt.type = "button";
-    delbutt.value = "delete";
-    delbutt.addEventListener('click', deleteRow(exercises, delbutt));
+    // var delbutt = document.createElement("input");
+    // delbutt.type = "button";
+    // delbutt.value = "delete";
+    // delbutt.addEventListener('click', deleteRow(exercises, delbutt));
     td1.textContent = payload.name;
     td2.textContent = payload.reps;
     td3.textContent = payload.weight;
     td4.textContent = payload.lbs;
     td5.textContent = payload.date;
-    td6.appendChild(delbutt);
+    // td6.appendChild(delbutt);
     tr.appendChild(td1);
     tr.appendChild(td2);
     tr.appendChild(td3);
     tr.appendChild(td4);
     tr.appendChild(td5);
-    tr.appendChild(td6);
+    // tr.appendChild(td6);
     tbl.appendChild(tr);
 
 
