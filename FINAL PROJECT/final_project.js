@@ -24,10 +24,7 @@ mysql.pool.query("DROP TABLE IF EXISTS exercises", function(err){
   "weight INT,"+
   "date DATE,"+
   "lbs BOOLEAN)";
-  mysql.pool.query(createString, function(err){
-    context.results = "Table reset";
-    res.render('home',context);
-  })
+  mysql.pool.query(createString);
 });
 
 app.get('/',function(req,res,next){
