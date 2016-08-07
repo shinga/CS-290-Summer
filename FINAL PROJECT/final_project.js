@@ -33,7 +33,8 @@ app.get('/',function(req,res,next){
         if(err){
             return next(err);
         }
-        context.results = rows;
+        context.resultlist = rows;
+        context.results = JSON.stringify(rows);
         res.render('home.handlebars', context);
     });
 });
