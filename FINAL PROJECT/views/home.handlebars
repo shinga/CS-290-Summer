@@ -27,7 +27,7 @@
     </fieldset>
 </form>
 <br><br>
-<table>
+<table id="exercises">
     <tr>
         <th>Activity Name</th>
         <th>Reps</th>
@@ -41,7 +41,7 @@
         <td>{{this.weight}}</td>
         <td>{{this.lbs}}</td>
         <td>{{this.date}}</td>
-        <td><input type="button" value="delete" onclick="deleteRow('dataTable',this)" /></td>
+        <td><input type="button" value="delete" onclick="deleteRow('exercises',this)" /></td>
     </tr>
     {{/each}}
 </table>
