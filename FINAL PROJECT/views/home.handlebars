@@ -28,10 +28,19 @@
 </form>
 
 <table>
-{{#each resultlist}}
-<tr>
-    <td>{{this.name}}</td>
-    <td>{{this.reps}}</td>
-</tr>
-{{/each}}
+    <tr>
+        <th>Activity Name</th>
+        <th>Reps</th>
+        <th>Weight</th>
+        <th>Pounds</th>
+        <th>Date</th>
+    {{#each resultlist}}
+    <tr>
+        <td>{{this.name}}</td>
+        <td>{{this.reps}}</td>
+        <td>{{this.weight}}</td>
+        <td>{{this.lbs}}</td>
+        <td>{{this.date}}</td>
+    </tr>
+    {{/each}}
 </table>
