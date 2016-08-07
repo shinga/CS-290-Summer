@@ -1,16 +1,15 @@
 var express = require('express');
 var mysql = require('./sqlstuff.js');
 
-var path = require('path');
-app.use(express.static('public'));
-app.use(express.static(path.join(__dirname, 'public')));
-
 var app = express();
 var handlebars = require('express-handlebars').create({defaultLayout:'main'});
 
 var bodyParser = require('body-parser');
 
+var path = require('path');
 
+app.use(express.static('public'));
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
