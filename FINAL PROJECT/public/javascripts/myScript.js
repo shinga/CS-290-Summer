@@ -48,7 +48,7 @@ document.getElementById('addActivity').addEventListener('click', function(event)
     var delbutt = document.createElement("input");
     delbutt.type = "button";
     delbutt.value = "delete";
-    delbutt.addEventListener('click', deleteRow(exercises, this));
+    delbutt.addEventListener('click', deleteRow(exercises, delbutt));
     td1.textContent = payload.name;
     td2.textContent = payload.reps;
     td3.textContent = payload.weight;
