@@ -36,7 +36,7 @@ document.getElementById('addActivity').addEventListener('click', function(event)
         // document.getElementById('originalUrl').textContent = response.longUrl;
         // document.getElementById('shortUrl').textContent = response.id;
       } else {
-        console.log("Error in network request: " + request.statusText);
+        console.log("Error in network request: " + req.statusText);
       }});
     req.send(JSON.stringify(payload));
     event.preventDefault();
