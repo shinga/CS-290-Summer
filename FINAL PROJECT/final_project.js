@@ -16,6 +16,20 @@ app.engine('handlebars', handlebars.engine);
 app.set('view engine', 'handlebars');
 app.set('port', 3000);
 
+mysql.pool.query("DROP TABLE IF EXISTS exercises", function(err){
+  var createString = "CREATE TABLE exercises("+
+  "id INT PRIMARY KEY AUTO_INCREMENT,"+
+  "name VARCHAR(255) NOT NULL,"+
+  "reps INT,"+
+  "weight INT,"+
+  "date DATE,"+
+  "lbs BOOLEAN)";
+  mysql.pool.query(createString, function(err){
+    context.results = "Table reset";
+    res.render('home',context);
+  })
+});
+
 app.get('/',function(req,res,next){
     var context = {};
     mysql.pool.query('SELECT * FROM exercises', function(err, rows, fields){
