@@ -84,7 +84,7 @@ app.post('/insert', function(req,res){
     var aDate = req.body.date;
     var aLbs = req.body.lbs;
 
-    pool.query("INSERT INTO exercises(name, reps, weight, date, lbs) VALUES (?, ?, ?, ?, ?)", [aName, aReps, aWeight, aDate, aLbs], function(err, result){
+    mysql.pool.query("INSERT INTO exercises(name, reps, weight, date, lbs) VALUES (?, ?, ?, ?, ?)", [aName, aReps, aWeight, aDate, aLbs], function(err, result){
         if(err){
           next(err);
           return;
