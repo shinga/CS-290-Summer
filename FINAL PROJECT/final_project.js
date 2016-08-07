@@ -57,6 +57,8 @@ app.get('/reset',function(req,res,next){
 
 app.get('/insert',function(req,res,next){
   var context = {};
+  mysql.pool.query("INSERT INTO exercises(name,reps,weight,date,lbs) VALUES ('Pushups',12,120,'2016-08-06',1),('Liftin bruh',30,100,'2016-08-07',0)");
+
   mysql.pool.query("INSERT INTO exercises (`name`) VALUES (?)", [req.query.c], function(err, result){
     if(err){
       next(err);
