@@ -73,7 +73,8 @@ app.get('/insert',function(req,res,next){
 
 
 
-app.post('/requests', function(req,res){
+app.post('/', function(req,res){
+    console.log("how'd it get here");
     var params = [];
     for (var i in req.body){
         params.push({'name':i,'val':req.body[i]})
@@ -83,7 +84,10 @@ app.post('/requests', function(req,res){
     res.render('home', context);
 });
 
-
+function deleteRow(tableID,currentRow) {console.log("I don't know why this works");
+console.log(tableID);
+console.log(currentRow);
+}
 
 app.use(function(req,res){
     res.status(404);
