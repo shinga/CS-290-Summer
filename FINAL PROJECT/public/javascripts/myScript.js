@@ -37,4 +37,29 @@ document.getElementById('addActivity').addEventListener('click', function(event)
       }});
     req.send(JSON.stringify(payload));
     event.preventDefault();
+    var tbl = document.getElementById('exercises');
+    var tr = document.createElement('tr');
+    var td1 = document.createElement("td");
+    var td2 = document.createElement("td");
+    var td3 = document.createElement("td");
+    var td4 = document.createElement("td");
+    var td5 = document.createElement("td");
+    td1.textContent = payload.name;
+    td2.textContent = payload.reps;
+    td3.textContent = payload.weight;
+    td4.textContent = payload.date;
+    td5.textContent = payload.lbs;
+    tr.appendChild(td5);
+    tr.appendChild(td4);
+    tr.appendChild(td3);
+    tr.appendChild(td2);
+    tr.appendChild(td1);
+    tbl.appendChild(tr);
+
+
+
+
+
+
+
   });
